@@ -1,0 +1,55 @@
+<h3>Students Details </h3>
+<!-- <button (click) = "showStudents()">Show Students</button> -->
+<!-- <h4>Student list is:</h4> -->
+<table *ngIf="students.length>0">
+    <thead>
+        <tr>
+            <th>Roll No</th>
+            <th>Student Name</th>
+            <th>Number Of Attempts</th>
+            <th>Percentage</th>
+            <th>Subjects Learning</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of students">
+            <td >{{s.rollNo}}</td>
+            <td >{{s.name}}</td>
+            <td >{{s.noOfAttempts}}</td>
+            <td >{{s.percentage}}</td>
+            <td >
+                <ul *ngFor="let sub of s.subjectsLearning" >
+                    <li>{{sub}}</li>
+                </ul>                
+                
+            </td>
+            <td> <button class="btnDelete" (click) = "deleteStudent(s.rollNo)"> Delete  </button> &nbsp;
+           <button  class="btnUpdate" (click) = "updateStudent(s)"> Update  </button>
+           
+        </td>
+        </tr>
+                
+    </tbody>
+    
+</table>
+<!-- <span [class] ="colorClass">{{message}}</span> -->
+<h3>Table Of Updated students</h3>
+<table *ngIf="updatedstudents.length>0"><thead>
+    <th>Roll No</th>
+    <th>Student Name</th>
+    <th>Number Of Attempts</th>
+    <th>Percentage</th>
+    <th>Subjects Learning</th>
+    <!-- <th>Action</th>     -->
+  </thead>
+  <tbody>
+<tr *ngFor="let st of updatedstudents">
+    <td>{{st.rollNo}}</td>
+    <td>{{st.name}}</td>
+    <td>{{st.noOfAttempts}}</td>
+    <td>{{st.percentage}}</td>
+    <td>{{st.subjectsLearning}}</td>
+</tr>
+</tbody>
+</table>

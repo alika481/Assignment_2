@@ -1,0 +1,26 @@
+table,th,td{
+    border:1px solid ;
+    text-align: center;
+}
+button{
+    background-color: rgb(6, 186, 6);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.btnDelete{
+    background-color: red;
+}
+.btnUpdate{
+    background-color:rgb(6, 186, 6) ;
+
+}
+.success{
+    color:rgb(6, 186, 6);
+    font-size: 28px;
+    }
+.error{
+    color:red;
+    font-size: 28px;
+}
